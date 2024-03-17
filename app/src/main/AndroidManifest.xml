@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name=".activities.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ecomflexi"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:exported="true"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:exported="true"
+            android:resource="@color/white" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:exported="true"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+            android:exported="true"
+            android:value="ocr" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Start"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.view.MainActivityc"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Myprofile"
+            android:exported="true"
+            android:label="My profile" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Twostep"
+            android:exported="true"
+            android:label="Two step" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Addpic"
+            android:exported="true"
+            android:label="Scan Id Card" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Cropm"
+            android:exported="true"
+            android:label="Crop Image" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Billpay"
+            android:exported="true"
+            android:label="Bill pay" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.New_support"
+            android:exported="true"
+            android:label="New Support Tricket" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Tricket_main_read"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Tricket_main"
+            android:exported="true"
+            android:label="Support Tricket" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.RegisterActivity"
+            android:exported="true"
+            android:label="Create Account" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Welcome"
+            android:exported="true"
+            android:label="Service list" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Banktransfer"
+            android:exported="true"
+            android:label="Bank Transfer" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.PinActivity"
+            android:label="Pin Confirm" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Mainlist"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.News"
+            android:exported="true"
+            android:label="Notice Board" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.web"
+            android:exported="true"
+            android:label="Welcome" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.MainActivity"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.pinver"
+            android:exported="true"
+            android:label="Pin" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.DisplayActivity"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.DisplayActivitya"
+            android:exported="true"
+            android:label="New Request" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Operator"
+            android:exported="true"
+            android:label="Select Operator" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Addres"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Myreseller"
+            android:exported="true"
+            android:label="Add reseller" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Signin"
+            android:exported="true"
+            android:label="Signin" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Url"
+            android:exported="true"
+            android:label="Add url" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Develop"
+            android:exported="true"
+            android:label="About us" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.service_a"
+            android:exported="true"
+            android:label="Service us" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Editres"
+            android:exported="true"
+            android:label="Edit" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Payment"
+            android:exported="true"
+            android:label="Payment" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Transfer"
+            android:exported="true"
+            android:label="Transfer" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Smssend"
+            android:exported="true"
+            android:label="Send Sms" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.history_op"
+            android:exported="true"
+            android:label="History" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Password"
+            android:exported="true"
+            android:label="Password Change" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Pinc"
+            android:exported="true"
+            android:label="Pin change" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.mydevice"
+            android:exported="true"
+            android:label="My Device" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.makepay"
+            android:exported="true"
+            android:label="Make payment" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Internet"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.InternetActivity"
+            android:exported="true"
+            android:label="Internet Pakage" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Payment_type"
+            android:exported="true"
+            android:label="Payment type" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.Dlock"
+            android:exported="true"
+            android:label="Device Lock" />
+
+        <receiver
+            android:name="com.ecomflexi.softwarelabbd.FirebaseBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.ecomflexi.softwarelabbd" />
+            </intent-filter>
+        </receiver>
+        <provider
+            tools:replace="android:authorities"
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.com.squareup.picasso"
+            android:exported="false" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.vision.VisionRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ml.common.CommonComponentRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <!--<activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />-->
+        <!--<service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>-->
+        <!--<receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>-->
+        <!--<activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Translucent.NoTitleBar" />-->
+        <provider
+            tools:replace="android:authorities"
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.ecomflexi.softwarelabbd.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <!--<receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>-->
+
+        <!--<service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
+        <receiver
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <receiver
+            android:name="com.onesignal.BootUpReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <receiver
+            android:name="com.onesignal.UpgradeReceiver"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <activity android:name=".sliderAdapter.WebActivity" />
+        <activity android:name=".sliderAdapter.AllSliderActivity" />
+
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivitySplash"
+            android:exported="true"
+            android:label="@string/ecommerce_name">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.MainActivity"
+            android:exported="true"
+            android:label="@string/ecommerce_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityCart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityProductDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityCheckout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityHelp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityImageDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivityNotificationDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.activities.ActivitySettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/Pref" />
+
+        <!-- fcm -->
+        <service
+            android:name="com.ecomflexi.softwarelabbd.notification.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ecomflexi.softwarelabbd.notification.MyFirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.ecomflexi.softwarelabbd.notification.NotificationExtenderExample"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.ecomflexi.softwarelabbd.notification.NotificationExtenderExample"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+    </application>
+
+</manifest>
